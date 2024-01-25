@@ -6,13 +6,13 @@ import s from "./Layout.module.scss";
 export const Layout = () => {
   return (
     <>
-      <header className={s.header}>
+      <header className={s.header__wrapper}>
         <Header />
       </header>
-      <main>
+      <main className={s.main__wrapper}>
         <Outlet />
       </main>
-      <footer>
+      <footer className={s.footer__wrapper}>
         <Footer />
       </footer>
     </>
