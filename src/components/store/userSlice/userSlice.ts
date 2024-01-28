@@ -23,13 +23,15 @@ export const fetchUsers = createAsyncThunk<Users[], undefined, {rejectValue: str
   'todos/fetchTodos',
   async function(_, {rejectWithValue}) {
     
-      const response = await fetch('http://localhost:5001/users');
+      const response = await fetch('https://jsonplaceholder.typicode.com/users');
+      console.log(response)
   
       if (!response.ok) {
         return rejectWithValue('Server Error!');
       }
       const data = await response.json();
-  
+      console.log('work');
+      console.log(data);
       return data;
     
   }
