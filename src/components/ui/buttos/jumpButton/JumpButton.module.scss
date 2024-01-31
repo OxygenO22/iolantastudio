@@ -1,0 +1,15 @@
+.jumpbutton__wrapper {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  transition: .3s;
+  &:hover {
+    left: 16px;
+  }
+}
+
+.jumpbutton {
+  font-size: 2em;
+  cursor: pointer;
+  transition: .3s;
+}

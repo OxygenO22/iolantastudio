@@ -9,5 +9,9 @@ interface IRouteButton {
 
 export const RouteButton: FC<IRouteButton> = (props) => {
   const { path, name } = props; 
-  return <NavLink className={s.navlink} to={path}>{name}</NavLink>;
+  return (
+    <NavLink className={({isActive}) => isActive ? s.navlink_active : s.navlink} to={path}>
+      {name}
+    </NavLink>
+  );
 };

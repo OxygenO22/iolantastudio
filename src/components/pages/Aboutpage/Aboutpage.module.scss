@@ -1,0 +1,14 @@
+.user__wrapper {
+  text-decoration: none;
+}
+
+.users {
+  list-style-type: none;
+  margin-bottom: 10px;
+  color: #000;
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    color: #746140;
+  }
+}
