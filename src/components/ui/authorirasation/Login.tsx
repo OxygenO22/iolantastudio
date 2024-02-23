@@ -13,7 +13,6 @@ export const Login = () => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        console.log(user);
         dispatch(
           setUser({
             email: user.email,
