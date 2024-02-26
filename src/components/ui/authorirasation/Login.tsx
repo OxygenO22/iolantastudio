@@ -8,6 +8,7 @@ import { AuthorisationForm } from "../../ui/authForm/AuthorisationForm";
 export const Login = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+  console.log(navigate)
 
   const handleLogin = (email: string, password: string) => {
     const auth = getAuth();
@@ -20,7 +21,7 @@ export const Login = () => {
             token: user.refreshToken,
           })
         );
-        navigate("/createpost");
+        navigate("/");
       })
       .catch(() => alert('Invalid user'));
   };

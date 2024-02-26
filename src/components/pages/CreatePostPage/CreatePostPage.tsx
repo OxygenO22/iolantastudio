@@ -1,28 +1,20 @@
-import React,{ useEffect} from 'react';
 import { useAuth } from '../../hooks/use-auth';
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from '../../hooks/Hooks';
-import { removeUser } from '../../store/authorisationSlice/authorisationSlice';
-import { MyButton } from '../../ui/buttos/MyButton/MyButton';
+import { CreatePostInput } from '../../ui/createPostInput/CreatePostInput';
 
-export const CreatePostPage = () => {
-  const dispatch = useAppDispatch();
+export const CreatePostPage = () => { 
   const navigate = useNavigate();
-
-  const { isAuth, email } = useAuth();
+  const { isAuth } = useAuth();
+  
   return isAuth ? (
     <div>
       <h1>CreatePostPage</h1>
-      <MyButton
-        name={`Log out from ${email}`}
-        onClick={() => dispatch(removeUser())}
-      />
+      <CreatePostInput />
+      <div>
+        
+      </div>
     </div>
   ) : (
-    <>
-      {
-        navigate("/posts")
-      }
-    </>
+    <>{navigate("/posts")}</>
   );
 }

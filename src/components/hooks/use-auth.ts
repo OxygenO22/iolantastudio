@@ -8,5 +8,5 @@ export function useAuth() {
     email,
     token,
     id
-  };
+  }; 
 }

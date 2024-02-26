@@ -1,4 +1,31 @@
 {
+  "posts": [
+    {
+      "id": "1",
+      "title": "Permanent",
+      "text": "Ideal permanent for your best appearance"
+    },
+    {
+      "id": "2024-02-26T17:49:50.156Z",
+      "title": "Tato",
+      "text": "The best tatos"
+    },
+    {
+      "id": "2024-02-26T17:51:11.434Z",
+      "title": "Brows",
+      "text": "Your beauty with delightful brows"
+    },
+    {
+      "id": "2024-02-26T18:46:36.212Z",
+      "title": "Nails",
+      "text": "You'v never seen such high level nails before"
+    },
+    {
+      "id": "2024-02-26T18:49:03.307Z",
+      "title": "Make Up",
+      "text": "Become such as photomodel"
+    }
+  ],
   "users": [
     {
       "id": 1,
