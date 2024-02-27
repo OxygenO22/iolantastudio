@@ -8,10 +8,10 @@ import { AuthorisationForm } from "../../ui/authForm/AuthorisationForm";
 export const Login = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  console.log(navigate)
 
   const handleLogin = (email: string, password: string) => {
     const auth = getAuth();
+    if (email !== '' && password !== '' ) {
     signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
         dispatch(
@@ -21,9 +21,12 @@ export const Login = () => {
             token: user.refreshToken,
           })
         );
-        navigate("/");
+        navigate(-1);
       })
       .catch(() => alert('Invalid user'));
+    } else {
+      alert('Fill all fields!')
+    }
   };
 
   return (
