@@ -9,6 +9,8 @@ import { PostsPage } from "./PostsPage/PostsPage";
 import { LoginPage } from "./LoginPage/LoginPage";
 import { RegisterPage } from "./RegisterPage/RegisterPage";
 import { CreatePostPage } from "./CreatePostPage/CreatePostPage";
+import { DocsPage } from "./docsPage/DocsPage";
+import { ProceduresPage } from "./proceduresPage/ProceduresPage";
 
 export const Router = () => {
   return (
@@ -18,6 +20,8 @@ export const Router = () => {
           <Route index element={<Homepage />} />
           <Route path="posts" element={<PostsPage />} />
           <Route path="blog" element={<Blogpage />} />
+          <Route path="docs" element={<DocsPage />} />
+          <Route path="procedures" element={<ProceduresPage />} />
           <Route path="about" element={<Aboutpage />} />
           <Route path="about/:id" element={<Singlepage />} />
           <Route path="login" element={<LoginPage />} />

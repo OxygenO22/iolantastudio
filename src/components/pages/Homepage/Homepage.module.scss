@@ -1,0 +1,13 @@
+.homepage__wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+}
+
+.homepage__title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
