@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@cyntler/react-doc-viewer": "^1.14.1",
+    "@emailjs/browser": "^4.3.3",
     "@reduxjs/toolkit": "^2.1.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -12,6 +13,7 @@
     "@types/node": "^16.18.74",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "email-js": "^2.0.2",
     "firebase": "^10.8.0",
     "node": "^20.11.0",
     "react": "^18.2.0",
