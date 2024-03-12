@@ -1,11 +1,16 @@
 import React, { useRef } from 'react';
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 
+interface IResponse {
+  status: number;
+  text: string
+}
+
 
 export const EmailContactForm = () => {
   const form: any | undefined = useRef();
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: { preventDefault: () => void; }) => {
     e.preventDefault(); 
 
     emailjs
@@ -16,7 +21,7 @@ export const EmailContactForm = () => {
         `${process.env.REACT_APP_EMAILJS_PUBLIC_KEY}`
       )
       .then(
-        (response: any) => {
+        (response:IResponse) => {
           console.log("SUCCESS!", response.status, response.text);
         },
         (error: string) => {
