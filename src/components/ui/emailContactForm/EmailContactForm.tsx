@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
+import { useState } from 'react';
+import emailjs from "@emailjs/browser";
 import s from './EmailContactForm.module.scss';
+import { MyButton } from '../buttos/MyButton/MyButton';
 
 interface IResponse {
   status: number;
@@ -16,15 +17,15 @@ interface IData {
 
 export const EmailContactForm = () => {
   const [name, setName] = useState('')
-  const [email, setEmail] = useState("");
-  const [procedure, setProcedure] = useState("");
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState('');
+  const [procedure, setProcedure] = useState('');
+  const [message, setMessage] = useState('');
 
   const clearForm = () => {
     setName('');
-    setEmail("");
-    setProcedure("");
-    setMessage("");
+    setEmail('');
+    setProcedure('');
+    setMessage('');
   }
 
   const sendEmail = (e: { preventDefault: () => void; }) => {
@@ -46,8 +47,10 @@ export const EmailContactForm = () => {
         )
         .then(
           (response: IResponse) => {
-            alert(`SUCCESS! ${(response.status, response.text)}`);
-            clearForm();
+            alert(`Thanks for your message! ${response.status} ${response.text}`);
+            if (response.status === 200) {
+              clearForm();
+            }
           },
           (error: string) => {
             alert(`FAILED... ${error}`);
@@ -61,37 +64,41 @@ export const EmailContactForm = () => {
   return (
     <form className={s.form__wrapper} onSubmit={sendEmail}>
       <label className={s.label}>
-        <span className={s.title}>Your Name</span>
+        <span className={s.title}>Your Name:</span>
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
           type="text"
+          placeholder="Enter your name"
         />
       </label>
       <label className={s.label}>
-        <span className={s.title}>Your Email</span>
+        <span className={s.title}>Your Email:</span>
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
+          placeholder="Enter your email"
         />
       </label>
       <label className={s.label}>
-        <span className={s.title}>Type of procedure</span>
+        <span className={s.title}>Type of procedure:</span>
         <input
           value={procedure}
           onChange={(e) => setProcedure(e.target.value)}
           type="text"
+          placeholder="Enter procedure you want"
         />
       </label>
       <label className={s.label}>
-        <span className={s.title}>Message</span>
+        <span className={s.title}>Message:</span>
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          placeholder="Enter options or wishes"
         />
       </label>
-      <input type="submit" value="Send" />
+      <MyButton name='Send' buttonType='submit' />
     </form>
   );
 }

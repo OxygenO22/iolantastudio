@@ -14,6 +14,7 @@ export const Homepage = () => {
         ))}
       </div>
       <div>
+        <h2>To connect with me you can fill the form</h2>
         <EmailContactForm />
       </div>
     </div>
