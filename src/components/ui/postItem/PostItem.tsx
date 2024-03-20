@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import s from './PostItem.module.scss';
 import { useAppDispatch } from '../../hooks/Hooks';
-import { deleteTodo } from '../../store/createPostSlice/CreatePostSlice';
+import { deletePost } from '../../store/createPostSlice/CreatePostSlice';
 
 interface INewPost {
   id: string;
@@ -20,7 +20,7 @@ export const PostItem: FC<INewPost> = ({id, title, text}) => {
       <div className={s.postitem__delete_wrapper}>
         <div
           className={s.postitem__delete_inner}
-          onClick={() => dispatch(deleteTodo(id))}
+          onClick={() => dispatch(deletePost(id))}
         >
           &#10006;
         </div>

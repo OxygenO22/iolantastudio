@@ -48,7 +48,7 @@ export const addNewPost = createAsyncThunk<Post, {title: string, text: string}, 
   }
 );
 
-export const deleteTodo = createAsyncThunk<string, string, { rejectValue: string }>(
+export const deletePost = createAsyncThunk<string, string, { rejectValue: string }>(
   "posts/deleteTodo",
   async function (id, { rejectWithValue }) {
     const response = await fetch("http://localhost:5001/posts" + `/${id}`, {
@@ -88,7 +88,7 @@ const postSlice = createSlice({
       .addCase(addNewPost.fulfilled, (state, action) => {
         state.list.push(action.payload);
       })
-      .addCase(deleteTodo.fulfilled, (state, action) => {
+      .addCase(deletePost.fulfilled, (state, action) => {
         state.list = state.list.filter((todo) => todo.id !== action.payload);
       })
       .addMatcher(isError, (state, action: PayloadAction<string>) => {
