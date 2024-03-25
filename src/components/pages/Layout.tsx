@@ -20,9 +20,11 @@ export const Layout = () => {
         <Header />
       </header>
       <main className={s.main__wrapper}>
-        <Outlet />
-        {loading && <h2>Loading...</h2>}
-        {error && <h2>An error occured: {error} </h2>}
+        <div className={s.main__inner}>
+          <Outlet />
+          {loading && <h2>Loading...</h2>}
+          {error && <h2>An error occured: {error} </h2>}
+        </div>
       </main>
       <footer className={s.footer__wrapper}>
         <Footer />
