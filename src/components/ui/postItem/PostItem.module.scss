@@ -3,7 +3,12 @@
   align-items: center;
   min-height: 80px;
   margin-bottom: 20px;
-  border: 1px solid #000;
+  width: 600px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
 }
 
 .postitem__content {

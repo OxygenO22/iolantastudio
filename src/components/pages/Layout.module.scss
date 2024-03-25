@@ -2,6 +2,7 @@
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 1000;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -16,9 +17,11 @@
   display: flex;
   justify-content: center;
   background: #cfc796;
+  overflow-y: auto;
 }
 
 .main__inner {
+  width: 100%;
   max-width: 1200px;
   height: 100%;
 }
@@ -27,6 +30,7 @@
   position: sticky;
   bottom: 0;
   left: 0;
+  z-index: 1000;
   width: 100%;
   display: flex;
   justify-content: center;

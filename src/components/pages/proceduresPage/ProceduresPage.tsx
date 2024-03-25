@@ -4,7 +4,7 @@ import { ProceduresItem } from './ProceduresItem';
 
 export const ProceduresPage = () => {
   return (
-    <div>
+    <div className={s.procpage__wrapper}>
       <h1>ProceduresPage</h1>
       <ProceduresItem />
     </div>
