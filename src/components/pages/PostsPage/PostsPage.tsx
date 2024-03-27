@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/Hooks';
 import { fetchPosts } from '../../store/createPostSlice/CreatePostSlice';
 import { PostList } from '../../ui/postList/PostList';
 import s from './PostsPage.module.scss'
+import { PageTitle } from '../../ui/pageTitle/PageTitle';
 
 export const PostsPage = () => {
   const auth = useAuth();
@@ -18,9 +19,7 @@ export const PostsPage = () => {
 
   return (
     <div className={s.postspage__wrapper}>
-      <div className={s.postspage__title_wrapper}>
-        <h1>Posts</h1>
-      </div>
+      <PageTitle title='Posts' />
 
       <PostList />
 

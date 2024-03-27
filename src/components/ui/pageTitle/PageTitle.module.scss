@@ -1,15 +1,19 @@
 .pagetitle__wrapper {
   position: absolute;
-  top: -5%;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 11;
+  z-index: 12;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
+}
+
+.pagetitle__title {
+  color: #dbd6d6;
 }
