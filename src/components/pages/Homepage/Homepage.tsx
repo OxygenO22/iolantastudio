@@ -3,13 +3,13 @@ import { congrats } from './HomepageDate';
 import s from './Homepage.module.scss';
 import { EmailContactForm } from '../../ui/emailContactForm/EmailContactForm';
 import Me from '../../../pictures/me/me.jpg';
+import { PageTitle } from '../../ui/pageTitle/PageTitle';
 
 
 export const Homepage = () => {
   return (
     <div className={s.homepage__wrapper}>
-      <h1 className={s.homepage__title}>Homepage</h1>
-      <div className={s.homepage__inner}>
+      <PageTitle title='My page' />
         <div className={s.homepage__picture_wrapper}>
           <img className={s.homepage__picture} src={Me} alt="Me" />
         </div>
@@ -29,7 +29,6 @@ export const Homepage = () => {
             <EmailContactForm />
           </div>
         </div>
-      </div>
     </div>
   );
 }

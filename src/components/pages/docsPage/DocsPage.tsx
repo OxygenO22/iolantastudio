@@ -22,14 +22,14 @@ export const DocsPage = () => {
   ];
   return (
     <div>
-      <h1>DocsPage</h1>
+      {/* <h1>DocsPage</h1>
       <div className={s.docs_wrapper}>
         <DocViewer
           documents={docs}
           pluginRenderers={DocViewerRenderers}
           className={s.docs}
         />
-      </div>
+      </div> */}
     </div>
   );
 }

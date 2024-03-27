@@ -5,6 +5,7 @@ import { useAuth } from '../../hooks/use-auth';
 import { useAppDispatch, useAppSelector } from '../../hooks/Hooks';
 import { fetchPosts } from '../../store/createPostSlice/CreatePostSlice';
 import { PostList } from '../../ui/postList/PostList';
+import s from './PostsPage.module.scss'
 
 export const PostsPage = () => {
   const auth = useAuth();
@@ -16,20 +17,21 @@ export const PostsPage = () => {
   }, [dispatch])
 
   return (
-    <div>
-      <h1>Posts</h1>
-      
+    <div className={s.postspage__wrapper}>
+      <div className={s.postspage__title_wrapper}>
+        <h1>Posts</h1>
+      </div>
+
       <PostList />
 
       {loading && <h2>Loading...</h2>}
       {error && <h2>An error occured: {error} </h2>}
 
-
-      {auth.isAuth &&
+      {auth.isAuth && (
         <Link to="/createpost">
           <MyButton name={"Create post"} />
         </Link>
-      }
+      )}
     </div>
   );
 }
