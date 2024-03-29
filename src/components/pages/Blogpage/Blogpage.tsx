@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import s from './Blogpage.module.scss';
+import { PageTitle } from '../../ui/pageTitle/PageTitle';
 
 export const Blogpage = () => {
   return (
-    <div>
-      <h1>Blogpage</h1>
+    <div className={s.blogpage__wrapper}>
+      <PageTitle title='Blogpage' />
     </div>
   );
 }
