@@ -4,6 +4,7 @@ const RouteButtonData = [
   {id: 3, path: '/blog', name: 'Blog'},
   {id: 4, path: '/about', name: 'About'},
   {id: 5, path: '/procedures', name: 'Procedures'},
+  {id: 6, path: '/galary', name: 'Galary'},
 ];
 
 const RouteButtonProceduresData = [
