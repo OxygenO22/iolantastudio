@@ -3,20 +3,42 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
 }
 
 .icon__wrapper {
   display: flex;
   justify-content: center;
-  width: 10%;
+  align-items: center;
+  width: 15%;
   padding: 0 10px;
+}
+
+.icon__picture_wrapper {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, .5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: 1s ease-in-out;
+  &:hover {
+    transform: rotate(360deg);
+    box-shadow: 0 0 15px rgba(173, 6, 240, 0.5);
+  }
+}
+
+.icon__picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .routebutton__wrapper {
   display: flex;
   justify-content: center;
-  width: 60%;
+  width: 70%;
 }
 
 .loginicon__wrapper {
