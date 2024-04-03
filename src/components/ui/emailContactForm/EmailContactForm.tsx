@@ -66,6 +66,7 @@ export const EmailContactForm = () => {
       <label className={s.label}>
         <span className={s.title}>Your Name:</span>
         <input
+          className={s.form__input}
           value={name}
           onChange={(e) => setName(e.target.value)}
           type="text"
@@ -75,6 +76,7 @@ export const EmailContactForm = () => {
       <label className={s.label}>
         <span className={s.title}>Your Email:</span>
         <input
+          className={s.form__input}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
@@ -84,21 +86,23 @@ export const EmailContactForm = () => {
       <label className={s.label}>
         <span className={s.title}>Type of procedure:</span>
         <input
+          className={s.form__input}
           value={procedure}
           onChange={(e) => setProcedure(e.target.value)}
           type="text"
           placeholder="Enter procedure you want"
         />
       </label>
-      <label className={s.label}>
+      <label className={s.label__textarea}>
         <span className={s.title}>Message:</span>
         <textarea
+          className={s.form__textarea}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Enter options or wishes"
         />
       </label>
-      <MyButton name='Send' buttonType='submit' />
+      <MyButton name="Send" buttonType="submit" />
     </form>
   );
 }

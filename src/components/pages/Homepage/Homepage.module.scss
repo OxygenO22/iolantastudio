@@ -38,7 +38,8 @@
 .homepage__text_wrapper {
   position: absolute;
   top: 10%;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 3;
   width: 700px;
   background: rgba(6, 2, 255, 0.3);
@@ -66,7 +67,7 @@
   bottom: 2%;
   right: -20px;
   z-index: 4;
-  width: 600px;
+  max-width: 500px;
   background: rgba(136, 1, 247, 0.3);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   border-radius: 15px;

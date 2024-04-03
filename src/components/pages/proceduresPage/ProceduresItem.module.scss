@@ -16,6 +16,10 @@
   border-radius: 15px;
   cursor: pointer;
   overflow: hidden;
+  transition: .5s;
+  &:hover {
+    box-shadow: 0 9px 9px rgba(0, 0, 0, 0.4);
+  }
   
   &:hover .procitem__title_wrapper {
     transform: translate(0, 0px);
