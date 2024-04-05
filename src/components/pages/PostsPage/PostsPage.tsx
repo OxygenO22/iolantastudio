@@ -27,7 +27,7 @@ export const PostsPage = () => {
       {error && <h2>An error occured: {error} </h2>}
 
       {auth.isAuth && (
-        <Link to="/createpost">
+        <Link to="/createpost" className={s.postpage__link}>
           <MyButton name={"Create post"} />
         </Link>
       )}

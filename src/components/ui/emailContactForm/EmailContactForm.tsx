@@ -2,6 +2,7 @@ import { useState } from 'react';
 import emailjs from "@emailjs/browser";
 import s from './EmailContactForm.module.scss';
 import { MyButton } from '../buttos/MyButton/MyButton';
+import { Myselect } from '../select/Myselect';
 
 interface IResponse {
   status: number;
@@ -85,12 +86,19 @@ export const EmailContactForm = () => {
       </label>
       <label className={s.label}>
         <span className={s.title}>Type of procedure:</span>
-        <input
+        <Myselect
           className={s.form__input}
+          defaultValue="Enter procedure you want"
+          options={[
+            { value: "Permanent", name: "Permanent" },
+            { value: "Removal of Permanent", name: "Removal of Permanent" },
+            { value: "Tattoo", name: "Tattoo" },
+            { value: "Nails", name: "Nails" },
+            { value: "Brows", name: "Brows" },
+            { value: "MakeUp", name: "MakeUp" },
+          ]}
           value={procedure}
-          onChange={(e) => setProcedure(e.target.value)}
-          type="text"
-          placeholder="Enter procedure you want"
+          onChange={proc => setProcedure(proc)}
         />
       </label>
       <label className={s.label__textarea}>
