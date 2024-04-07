@@ -1,3 +1,4 @@
+import { title } from 'process';
 import React, { FC } from 'react';
 
 interface Options {
@@ -6,20 +7,43 @@ interface Options {
 }
 
 interface IMyselect {
-  options: any;
+  options: Options[];
+  title: string;
   defaultValue: string;
-  className: any;
+  classNameLabel: string;
+  classNameSpan: string;
+  classNameSelect: string;
   value: string;
-  onChange: (prop: any) => void;
+  onChange: (prop: string) => void;
 }
 
-export const Myselect: FC<IMyselect> = ({ options, defaultValue, className, value, onChange }) => {
+export const Myselect: FC<IMyselect> = ({
+  options,
+  title,
+  defaultValue,
+  classNameSelect,
+  classNameLabel,
+  classNameSpan,
+  value,
+  onChange,
+}) => {
   return (
-    <select className={className} value={value} onChange={(e: any) => onChange(e.target.value)}>
-      <option disabled value="">{defaultValue}</option>
-      {options.map((option: any) => (
-        <option key={option.value} value={option.value}>{option.name}</option>
-      ))}
-    </select>
+    <label className={classNameLabel}>
+      <span className={classNameSpan}>{title}</span>
+      <select
+        className={classNameSelect}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+      >
+        <option disabled value="">
+          {defaultValue}
+        </option>
+        {options.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.name}
+          </option>
+        ))}
+      </select>
+    </label>
   );
 };
